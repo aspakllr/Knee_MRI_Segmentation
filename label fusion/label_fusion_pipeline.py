@@ -26,7 +26,7 @@ for pat in range(0, len(data_names)):
     patient = data_names[pat]
     target_mri = jp(data_path, patient, ''.join((patient, '.nii.gz')))
 
-    # warped_label: the predicted labelmaps from each atlas/reference space, that are projected back to the original 	   subject space
+    # warped_label: the predicted labelmaps from each atlas/reference space, that are projected back to the original subject space
     warped_label = np.array([
         jp('/.../Registration_1/...', patient,  ''.join((patient, '_predicted_labelmap_inv.nii.gz'))),
         jp('/.../Registration_2/...', patient,  ''.join((patient, '_predicted_labelmap_inv.nii.gz'))),
